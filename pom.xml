@@ -11,7 +11,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>vertx-mysql-postgresql-client</artifactId>
-  <version>3.3.3</version>
+  <version>3.3.3.imaslov2</version>
 
   <name>Vert.x MySQL/PostgreSQL Client</name>
 
@@ -22,6 +22,14 @@
 
     <host>localhost</host>
   </properties>
+
+  <distributionManagement>
+    <repository>
+      <id>bintray-ismaslov-vertx</id>
+      <name>ismaslov-vertx</name>
+      <url>https://api.bintray.com/maven/ismaslov/vertx/vertx-mysql-postgresql-client/;publish=1</url>
+    </repository>
+  </distributionManagement>
 
   <dependencyManagement>
     <dependencies>
