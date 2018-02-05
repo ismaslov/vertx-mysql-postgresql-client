@@ -109,7 +109,7 @@ public abstract class AsyncConnectionPool {
   }
 
   public synchronized void giveBack(Connection connection) {
-    if (connection.isConnected()) {
+    if (connection.isConnected() && !availableConnections.contains(connection)) {
       availableConnections.add(connection);
     } else {
       poolSize -= 1;
